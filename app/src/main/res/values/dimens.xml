@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardCornerRadius">5dp</dimen>
+    <dimen name="cardElevation">20dp</dimen>
+    <dimen name="cardLayoutMargin">20dp</dimen>
+    <dimen name="logoHeight">200dp</dimen>
+    <dimen name="defaultLayoutMargin">20dp</dimen>
+    <dimen name="textSizeContent">16sp</dimen>
+</resources>
