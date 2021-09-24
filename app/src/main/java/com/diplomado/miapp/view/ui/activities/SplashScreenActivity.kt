@@ -1,10 +1,10 @@
 package com.diplomado.miapp.view.ui.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
 import com.diplomado.miapp.R
 import com.diplomado.miapp.databinding.ActivitySplashScreenBinding
 
@@ -22,7 +22,7 @@ class SplashScreenActivity : AppCompatActivity() {
         binding.idSplashScreen.startAnimation(animation)
         val intent = Intent(this, MainActivity::class.java)
 
-        animation.setAnimationListener(object: Animation.AnimationListener {
+        animation.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation?) {
             }
 

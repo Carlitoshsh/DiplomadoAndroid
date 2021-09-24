@@ -3,21 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     tools:context=".view.ui.fragments.AdminFragment">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <androidx.cardview.widget.CardView
+                card_view:cardCornerRadius="@dimen/cardCornerRadius"
+                card_view:cardElevation="@dimen/cardElevation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/cardCornerRadius"
-                app:cardElevation="@dimen/cardElevation"
                 android:layout_margin="@dimen/cardLayoutMargin">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -26,11 +30,12 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Mi Perfil"
                         android:gravity="center_horizontal"
-                        android:textSize="@dimen/itemCommentsUser"
+                        android:text="Mi Perfil"
                         android:textColor="@color/primaryColor"
-                        android:textStyle="bold"/>
+                        android:textSize="@dimen/itemCommentsUser"
+                        android:textStyle="bold" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/logoHeight"
@@ -41,35 +46,38 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:text="nombre"
-                        android:gravity="center_horizontal"
-                        android:textSize="@dimen/itemCommentsUser"
                         android:textColor="@color/primaryColor"
-                        android:textStyle="bold"/>
+                        android:textSize="@dimen/itemCommentsUser"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:text="direccion"
-                        android:gravity="center_horizontal"
-                        android:textSize="@dimen/itemCommentsUser"
                         android:textColor="@color/primaryColor"
-                        android:textStyle="bold"/>
+                        android:textSize="@dimen/itemCommentsUser"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:text="telefono"
-                        android:gravity="center_horizontal"
-                        android:textSize="@dimen/itemCommentsUser"
                         android:textColor="@color/primaryColor"
-                        android:textStyle="bold"/>
+                        android:textSize="@dimen/itemCommentsUser"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Correo"
                         android:gravity="center_horizontal"
-                        android:textSize="@dimen/itemCommentsUser"
+                        android:text="Correo"
                         android:textColor="@color/primaryColor"
-                        android:textStyle="bold"/>
+                        android:textSize="@dimen/itemCommentsUser"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>

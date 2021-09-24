@@ -7,40 +7,45 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="usuario"
                 android:gravity="left|top"
-                android:textSize="@dimen/itemCommentsUser"
+                android:text="usuario"
                 android:textColor="@color/primaryColor"
-                android:textStyle="bold"/>
+                android:textSize="@dimen/itemCommentsUser"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="5/5"
                 android:gravity="center|top"
-                android:textSize="@dimen/itemCommentsUser"
+                android:text="5/5"
                 android:textColor="@color/primaryColor"
-                android:textStyle="bold"/>
+                android:textSize="@dimen/itemCommentsUser"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
                 android:gravity="center|top"
-                android:textSize="@dimen/itemCommentsUser"
-                android:textColor="@color/textColor" />
+                android:text="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/itemCommentsUser" />
         </LinearLayout>
     </LinearLayout>
 

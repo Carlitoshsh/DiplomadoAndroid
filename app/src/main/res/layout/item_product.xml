@@ -16,21 +16,22 @@
             android:src="@mipmap/ic_launcher_foreground" />
 
         <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="producto"
-                android:gravity="center_horizontal"
-                android:textSize="@dimen/itemCommentsUser"
-                android:textColor="@color/primaryColor"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="$ 999.999"
-                android:gravity="center_horizontal"
-                android:textSize="@dimen/itemCommentsUser"
-                android:textColor="@color/primaryColor"
-                android:textStyle="bold"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="producto"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/itemCommentsUser"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="$ 999.999"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/itemCommentsUser"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
