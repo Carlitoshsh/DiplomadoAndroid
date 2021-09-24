@@ -6,4 +6,5 @@
     <dimen name="logoHeight">200dp</dimen>
     <dimen name="defaultLayoutMargin">20dp</dimen>
     <dimen name="textSizeContent">16sp</dimen>
+    <dimen name="itemCommentsUser">20sp</dimen>
 </resources>
