@@ -51,4 +51,7 @@ dependencies {
 
     api 'androidx.navigation:navigation-fragment-ktx:2.3.3'
     api 'androidx.navigation:navigation-ui-ktx:2.3.3'
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'org.osmdroid:osmdroid-android:6.1.10'
 }

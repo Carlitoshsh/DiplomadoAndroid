@@ -45,7 +45,36 @@
                         android:textSize="@dimen/textSizeContent">
 
                     </TextView>
+
                 </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/cardLayoutMargin"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                app:cardElevation="@dimen/cardElevation">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"></fragment>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/cardLayoutMargin"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                app:cardElevation="@dimen/cardElevation">
+
+                <org.osmdroid.views.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    ></org.osmdroid.views.MapView>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>

@@ -6,6 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.diplomado.miapp.R
+import com.diplomado.miapp.databinding.FragmentHomeBinding
+import com.diplomado.miapp.model.Location
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory
+import org.osmdroid.util.GeoPoint
+import org.osmdroid.views.MapView
+import org.osmdroid.views.overlay.Marker
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +28,12 @@ private const val ARG_PARAM2 = "param2"
  * Use the [HomeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), OnMapReadyCallback {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    
+    private lateinit var map: MapView;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +49,28 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+        mapFragment.getMapAsync(this)
+
+        map = view.findViewById(R.id.mapView)
+        map.setTileSource(TileSourceFactory.MAPNIK)
+
+        val location = Location()
+        val geoPoint = GeoPoint(location.latitude, location.longitude)
+        val mapController = map.controller
+        mapController.setZoom(16.0)
+        mapController.setCenter(geoPoint)
+
+        val marker = Marker(map)
+        marker.setPosition(geoPoint)
+        marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+        marker.setTitle("Mi app")
+        map.overlays.add(marker)
+
     }
 
     companion object {
@@ -56,5 +91,12 @@ class HomeFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onMapReady(p0: GoogleMap?){
+        val location = Location()
+        val zoom = 16f
+        val centerMap = LatLng(location.latitude, location.longitude)
+        p0?.animateCamera(CameraUpdateFactory.newLatLngZoom(centerMap, zoom))
     }
 }
